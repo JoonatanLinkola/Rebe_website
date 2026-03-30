@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Past and upcoming gigs for Rebecca Ekman."
+    />
+    <title>Gigs | Rebecca Ekman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">Rebecca Ekman</a>
+        <nav aria-label="Primary navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gigs.html" aria-current="page">Gigs</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section page-hero" aria-labelledby="gigs-title">
+        <div class="container section-inner contact-inner">
+          <h1 id="gigs-title">Gigs</h1>
+          <p>Use this page to list past and future performances.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="upcoming-title">
+        <div class="container section-inner">
+          <h2 id="upcoming-title">Upcoming</h2>
+          <div class="timeline">
+            <article>
+              <h3>Future Gig Placeholder</h3>
+              <p>Date, venue, city, and ticket link.</p>
+            </article>
+            <article>
+              <h3>Future Gig Placeholder</h3>
+              <p>Date, venue, city, and event details.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="past-title">
+        <div class="container section-inner">
+          <h2 id="past-title">Past Highlights</h2>
+          <div class="timeline">
+            <article>
+              <h3>UMO Helsinki Jazz Orchestra</h3>
+              <p>Jan 2025 and Jan 2026 - trumpet section and soloist.</p>
+            </article>
+            <article>
+              <h3>Karri Koira Band</h3>
+              <p>March and September 2025 - horn section.</p>
+            </article>
+            <article>
+              <h3>Riku Niemi Orchestra</h3>
+              <p>December 2024 - horn section and solo playing.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Rebecca Ekman</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

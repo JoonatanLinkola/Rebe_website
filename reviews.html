@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Reviews and press highlights for jazz trumpet player Rebecca Ekman."
+    />
+    <title>Reviews | Rebecca Ekman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">Rebecca Ekman</a>
+        <nav aria-label="Primary navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gigs.html">Gigs</a></li>
+            <li><a href="reviews.html" aria-current="page">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section page-hero" aria-labelledby="reviews-title">
+        <div class="container section-inner contact-inner">
+          <h1 id="reviews-title">Reviews</h1>
+          <p>Press highlights, interviews, and feature articles.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="articles-title">
+        <div class="container section-inner">
+          <h2 id="articles-title">Article Links</h2>
+          <div class="timeline">
+            <article>
+              <h3>Raikasta Eric Dolphya, yltakyllaista Kamasi Washingtonia</h3>
+              <p>
+                Jazzrytmit feature article.
+                <a
+                  href="https://www.jazzrytmit.fi/s13-artikkelit/raikasta-eric-dolphya-yltakyllaista-kamasi-washingtonia/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Read article</a
+                >
+              </p>
+            </article>
+            <article>
+              <h3>UMO Helsinki Jazz Orchestra: Metropolian uudet kyvyt Savoyssa</h3>
+              <p>
+                Jazzrytmit article about UMO and Metropolia new talents.
+                <a
+                  href="https://www.jazzrytmit.fi/yleinen/umo-helsinki-jazz-orchestra-metropolian-uudet-kyvyt-savoyssa/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Read article</a
+                >
+              </p>
+            </article>
+            <article>
+              <h3>Facebook interview by Harri Aavaharju</h3>
+              <p>
+                Interview link in Trumpettikilta group.
+                <a
+                  href="https://www.facebook.com/groups/trumpettikilta/posts/10164085578702573/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Read interview</a
+                >
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Rebecca Ekman</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Rebecca Ekman for bookings, collaborations, and trumpet teaching inquiries."
+    />
+    <title>Contact | Rebecca Ekman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">Rebecca Ekman</a>
+        <nav aria-label="Primary navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gigs.html">Gigs</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section page-hero" aria-labelledby="contact-title">
+        <div class="container section-inner contact-inner">
+          <h1 id="contact-title">Contact</h1>
+          <p>
+            Reach out for gig bookings, recording sessions, teaching, or collaborations.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="details-title">
+        <div class="container section-inner">
+          <h2 id="details-title">Details</h2>
+          <div class="info-grid">
+            <article class="card">
+              <h3>Phone</h3>
+              <p><a href="tel:+358405582333">0405582333</a></p>
+            </article>
+            <article class="card">
+              <h3>Email</h3>
+              <p><a href="mailto:rebe.ekman@gmail.com">rebe.ekman@gmail.com</a></p>
+            </article>
+            <article class="card">
+              <h3>Address</h3>
+              <p>Pengerkatu 13b A 20, Helsinki</p>
+            </article>
+          </div>
+          <ul class="social-links">
+            <li><a href="https://www.instagram.com/rebecca_ekman?igsh=eTV3eXB2cWE4bXl0" target="_blank" rel="noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/rebecca.ekman.775" target="_blank" rel="noreferrer">Facebook</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Rebecca Ekman</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

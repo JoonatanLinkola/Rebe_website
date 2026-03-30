@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Services by Rebecca Ekman including private teaching and session work."
+    />
+    <title>Services | Rebecca Ekman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">Rebecca Ekman</a>
+        <nav aria-label="Primary navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html" aria-current="page">Services</a></li>
+            <li><a href="gigs.html">Gigs</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section page-hero" aria-labelledby="services-title">
+        <div class="container section-inner contact-inner">
+          <h1 id="services-title">Services</h1>
+          <p>Private teaching, live performance, and creative collaboration.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="offers-title">
+        <div class="container section-inner">
+          <h2 id="offers-title">What I Offer</h2>
+          <div class="performance-grid">
+            <article class="card">
+              <h3>Private Trumpet Teaching</h3>
+              <p>
+                One-to-one lessons for beginners and advanced students in jazz and
+                classical styles.
+              </p>
+              <p>
+                <a
+                  href="https://www.superprof.fi/trumpetti-musiikinteoriatunteja-kaikentasoisille-metropolia-amk-ssa-opiskelevalta-jazz-trumpetistilta.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  >See lesson details on Superprof</a
+                >
+              </p>
+            </article>
+            <article class="card">
+              <h3>Workshop Sessions</h3>
+              <p>
+                Group sessions focused on improvisation, ensemble listening, and
+                phrasing.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Live and Studio Services</h3>
+              <p>
+                Horn section, solo trumpet parts, and arrangement collaboration for
+                bands and recordings.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="booking-title">
+        <div class="container section-inner contact-inner">
+          <h2 id="booking-title">Booking</h2>
+          <p>
+            For availability and rates, contact
+            <a href="mailto:rebe.ekman@gmail.com">rebe.ekman@gmail.com</a>.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Rebecca Ekman</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
