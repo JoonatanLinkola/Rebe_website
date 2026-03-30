@@ -8,27 +8,51 @@
       content="Services by Rebecca Ekman including private teaching and session work."
     />
     <title>Services | Rebecca Ekman</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="index.html">Rebecca Ekman</a>
-        <nav aria-label="Primary navigation">
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html" aria-current="page">Services</a></li>
-            <li><a href="gigs.html">Gigs</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
+        <div class="nav-left">
+          <a class="brand" href="index.html">Home</a>
+          <nav aria-label="Primary navigation">
+            <ul class="nav-links">
+              <li><a href="index.html#about">Biography</a></li>
+              <li><a href="index.html#music">Music</a></li>
+              <li><a href="index.html#experience">CV</a></li>
+              <li><a href="services.html" aria-current="page">Services</a></li>
+              <li><a href="gigs.html">Concerts</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <ul class="header-social" aria-label="Social links">
+          <li>
+            <a class="icon-link" href="https://www.instagram.com/rebecca_ekman?igsh=eTV3eXB2cWE4bXl0" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <circle cx="17.3" cy="6.8" r="1"></circle>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="icon-link" href="https://www.facebook.com/rebecca.ekman.775" target="_blank" rel="noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 3h-2.5C9.6 3 8 4.6 8 7.5V10H6v3h2v8h3v-8h2.6l.4-3H11V7.7c0-.9.3-1.7 1.8-1.7H15V3z"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="icon-link" href="mailto:rebe.ekman@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+                <path d="M4 8l8 6 8-6"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -36,41 +60,24 @@
       <section class="section page-hero" aria-labelledby="services-title">
         <div class="container section-inner contact-inner">
           <h1 id="services-title">Services</h1>
-          <p>Private teaching, live performance, and creative collaboration.</p>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="offers-title">
+      <section class="section" aria-label="Services">
         <div class="container section-inner">
-          <h2 id="offers-title">What I Offer</h2>
-          <div class="performance-grid">
+          <div class="services-grid">
             <article class="card">
-              <h3>Private Trumpet Teaching</h3>
+              <h3>Trumpet lessons</h3>
               <p>
-                One-to-one lessons for beginners and advanced students in jazz and
-                classical styles.
+                Private lessons for all levels, with a focus on jazz improvisation and trumpet technique.
               </p>
               <p>
                 <a
                   href="https://www.superprof.fi/trumpetti-musiikinteoriatunteja-kaikentasoisille-metropolia-amk-ssa-opiskelevalta-jazz-trumpetistilta.html"
                   target="_blank"
                   rel="noreferrer"
-                  >See lesson details on Superprof</a
+                  >See details on Superprof</a
                 >
-              </p>
-            </article>
-            <article class="card">
-              <h3>Workshop Sessions</h3>
-              <p>
-                Group sessions focused on improvisation, ensemble listening, and
-                phrasing.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Live and Studio Services</h3>
-              <p>
-                Horn section, solo trumpet parts, and arrangement collaboration for
-                bands and recordings.
               </p>
             </article>
           </div>

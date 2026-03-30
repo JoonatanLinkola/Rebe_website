@@ -1,6 +1,6 @@
 :root {
-  --bg: #f6f3ee;
-  --surface: #fffdfa;
+  --bg: #fffdfb;
+  --surface: #fefcf8;
   --text: #1e1a17;
   --muted: #5e5751;
   --accent: #9a6c46;
@@ -14,13 +14,25 @@
   box-sizing: border-box;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: "Manrope", "Trebuchet MS", sans-serif;
+  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   color: var(--text);
   background:
     radial-gradient(circle at 10% 15%, rgba(154, 108, 70, 0.08), transparent 30%),
@@ -39,7 +51,7 @@ body {
   top: 0;
   z-index: 100;
   backdrop-filter: blur(6px);
-  background: rgba(246, 243, 238, 0.86);
+  background: rgba(252, 251, 249, 0.9);
   border-bottom: 1px solid var(--border);
 }
 
@@ -48,15 +60,51 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.2rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .brand {
   text-decoration: none;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+  transition: color 200ms ease;
+}
+
+.brand::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  background: var(--accent);
+  transition: transform 220ms ease;
+}
+
+.brand:hover,
+.brand:focus-visible {
   color: var(--text);
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.6rem;
-  letter-spacing: 0.02em;
+}
+
+.brand:hover::after,
+.brand:focus-visible::after,
+.brand[aria-current="page"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.brand[aria-current="page"] {
+  color: var(--text);
 }
 
 .nav-links {
@@ -64,12 +112,14 @@ body {
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 1.2rem;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--muted);
+  font-weight: 600;
   position: relative;
   transition: color 200ms ease;
 }
@@ -103,45 +153,88 @@ body {
 }
 
 .nav-links a[aria-current="page"]::after {
+  height: 2px;
   transform: scaleX(1);
   transform-origin: left;
 }
 
+.header-social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.icon-link {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: color 200ms ease, border-color 200ms ease, transform 200ms ease;
+}
+
+.icon-link svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.icon-link svg path {
+  fill: currentColor;
+  stroke: none;
+}
+
+.icon-link:hover,
+.icon-link:focus-visible {
+  color: var(--text);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
 .hero {
-  min-height: 72vh;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 4.5rem 0 3rem;
+  padding: 2.4rem 0 2.2rem;
 }
 
-.hero-content {
-  max-width: 720px;
+.hero-shell {
+  width: min(98vw, 1520px);
+  margin: 0 auto;
 }
 
-.hero-portrait {
-  margin: 0 auto 1.15rem;
-  width: min(42vw, 220px);
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid rgba(154, 108, 70, 0.35);
-  box-shadow: 0 12px 28px rgba(30, 26, 23, 0.14);
+.hero-image {
+  position: relative;
+  border-radius: 0;
 }
 
-.hero-portrait img {
+.hero-image img {
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 
-.hero-kicker {
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.74rem;
-  margin-bottom: 1rem;
-  color: var(--muted);
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+  padding: clamp(1.2rem, 4vw, 3rem);
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 
 h1,
@@ -149,7 +242,7 @@ h2,
 h3 {
   margin: 0;
   line-height: 1.2;
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", serif;
   font-weight: 600;
 }
 
@@ -161,25 +254,25 @@ h1 {
 .subtitle {
   margin: 0.6rem 0 2rem;
   font-size: clamp(1rem, 2.6vw, 1.35rem);
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .button {
   display: inline-block;
   text-decoration: none;
-  color: var(--text);
-  border: 1px solid var(--accent);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.72);
   padding: 0.62rem 1.35rem;
   border-radius: 999px;
-  background: var(--surface);
+  background: rgba(15, 12, 10, 0.34);
   transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
 }
 
 .button:hover,
 .button:focus-visible {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(30, 26, 23, 0.13);
-  background-color: #f9f5ef;
+  box-shadow: 0 8px 24px rgba(10, 8, 7, 0.25);
+  background-color: rgba(15, 12, 10, 0.52);
 }
 
 .section {
@@ -237,6 +330,12 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 560px);
+  justify-content: center;
 }
 
 .card {
@@ -342,7 +441,8 @@ h1 {
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 280px));
+  justify-content: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -371,21 +471,25 @@ h1 {
   }
 
   .hero {
-    min-height: 64vh;
+    padding: 1.1rem 0 1.8rem;
   }
 }
 
 @media (max-width: 640px) {
   .nav-wrap {
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
     padding: 0.85rem 0;
   }
 
-  .nav-links {
-    width: 100%;
-    justify-content: center;
+  .nav-left {
     flex-wrap: wrap;
+    gap: 0.5rem 0.9rem;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
     gap: 0.8rem 1rem;
   }
 
