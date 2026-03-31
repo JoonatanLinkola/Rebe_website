@@ -433,9 +433,18 @@ h1 {
 }
 
 .subtle-link a {
-  color: var(--muted);
-  text-decoration-color: var(--accent);
+  color: var(--text);
+  text-decoration-color: rgba(154, 108, 70, 0.55);
   text-underline-offset: 0.2rem;
+  text-decoration-thickness: 1px;
+  transition: color 180ms ease, text-decoration-color 180ms ease, text-decoration-thickness 180ms ease;
+}
+
+.subtle-link a:hover,
+.subtle-link a:focus-visible {
+  color: var(--text);
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
 }
 
 .page-hero {
@@ -456,10 +465,27 @@ h1 {
 }
 
 .card a,
-.timeline a {
+.timeline a,
+.info-grid a,
+.contact-inner p a {
+  color: var(--text);
+  text-decoration-color: rgba(154, 108, 70, 0.55);
+  text-underline-offset: 0.2rem;
+  text-decoration-thickness: 1px;
+  transition: color 180ms ease, text-decoration-color 180ms ease, text-decoration-thickness 180ms ease;
+}
+
+.card a:hover,
+.card a:focus-visible,
+.timeline a:hover,
+.timeline a:focus-visible,
+.info-grid a:hover,
+.info-grid a:focus-visible,
+.contact-inner p a:hover,
+.contact-inner p a:focus-visible {
   color: var(--text);
   text-decoration-color: var(--accent);
-  text-underline-offset: 0.2rem;
+  text-decoration-thickness: 2px;
 }
 
 .site-footer {
