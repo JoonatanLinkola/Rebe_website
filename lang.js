@@ -11,6 +11,7 @@
         "nav.gigs": "Gigs",
         "nav.reviews": "Reviews",
         "nav.contact": "Contact",
+        "menu.toggleAria": "Open navigation menu",
         "aria.primaryNavigation": "Primary navigation",
         "aria.socialLinks": "Social links",
         "aria.instagram": "Instagram",
@@ -101,6 +102,7 @@
         "nav.gigs": "Keikat",
         "nav.reviews": "Arviot",
         "nav.contact": "Yhteys",
+        "menu.toggleAria": "Avaa navigointivalikko",
         "aria.primaryNavigation": "Päänavigointi",
         "aria.socialLinks": "Somelinkit",
         "aria.instagram": "Instagram",
@@ -235,7 +237,85 @@
     localStorage.setItem("siteLanguage", safeLang);
   }
 
+  function setupMobileMenu() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+
+    if (!menuToggle || !menu) {
+      return;
+    }
+
+    function isMenuOpen() {
+      return menuToggle.getAttribute("aria-expanded") === "true";
+    }
+
+    function closeMenu() {
+      if (!isMenuOpen()) {
+        return;
+      }
+
+      menu.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+
+      const onTransitionEnd = (event) => {
+        if (event.propertyName === "opacity") {
+          menu.hidden = true;
+          menu.removeEventListener("transitionend", onTransitionEnd);
+        }
+      };
+
+      menu.addEventListener("transitionend", onTransitionEnd);
+    }
+
+    function openMenu() {
+      menu.hidden = false;
+      requestAnimationFrame(() => {
+        menu.classList.add("is-open");
+      });
+      menuToggle.setAttribute("aria-expanded", "true");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      if (isMenuOpen()) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!isMenuOpen()) {
+        return;
+      }
+
+      const target = event.target;
+      if (!(target instanceof Element)) {
+        return;
+      }
+
+      if (!menu.contains(target) && !menuToggle.contains(target)) {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (isMenuOpen()) {
+          closeMenu();
+        }
+      },
+      { passive: true }
+    );
+
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
+    setupMobileMenu();
+
     const stored = localStorage.getItem("siteLanguage");
     const initialLang = stored === "fi" ? "fi" : "en";
     applyLanguage(initialLang);
