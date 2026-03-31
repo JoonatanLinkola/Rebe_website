@@ -41,10 +41,44 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+}
+
+/* Subtle ambience layer: soft corner tint and near-invisible paper grain */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  display: none;
+}
+
+body::after {
+  opacity: 0.35;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(30, 26, 23, 0.035) 0,
+    rgba(30, 26, 23, 0.035) 1px,
+    transparent 1px,
+    transparent 9px
+  );
 }
 
 main {
   flex: 1;
+}
+
+.site-header,
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
 }
 
 .container {
@@ -365,6 +399,14 @@ h1 {
 .card:hover {
   transform: translateY(-3px);
   border-color: var(--accent);
+}
+
+.info-grid .card:hover {
+  background-color: #f9f5ef;
+}
+
+.services-grid .card:hover {
+  background-color: #f9f5ef;
 }
 
 .timeline {
