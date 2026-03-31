@@ -6,61 +6,68 @@
     <meta
       name="description"
       content="Contact Rebecca Ekman for bookings, collaborations, and trumpet teaching inquiries."
+      data-i18n-attr="content:meta.description"
     />
-    <title>Contact | Rebecca Ekman</title>
+    <title data-i18n="meta.title">Contact | Rebecca Ekman</title>
     <link rel="stylesheet" href="../style.css" />
   </head>
-  <body>
+  <body data-page="contact">
     <header class="site-header">
       <div class="container nav-wrap">
         <div class="nav-left">
-          <a class="brand" href="../">Home</a>
-          <nav aria-label="Primary navigation">
+          <a class="brand" href="../" data-i18n="nav.home">Home</a>
+          <nav aria-label="Primary navigation" data-i18n-attr="aria-label:aria.primaryNavigation">
             <ul class="nav-links">
-              <li><a href="../#about">Biography</a></li>
-              <li><a href="../#music">Music</a></li>
-              <li><a href="../#cv">CV</a></li>
-              <li><a href="../services/">Services</a></li>
-              <li><a href="../gigs/">Gigs</a></li>
-              <li><a href="../reviews/">Reviews</a></li>
-              <li><a href="../contact/" aria-current="page">Contact</a></li>
+              <li><a href="../#about" data-i18n="nav.biography">Biography</a></li>
+              <li><a href="../#music" data-i18n="nav.music">Music</a></li>
+              <li><a href="../#cv" data-i18n="nav.cv">CV</a></li>
+              <li><a href="../services/" data-i18n="nav.services">Services</a></li>
+              <li><a href="../gigs/" data-i18n="nav.gigs">Gigs</a></li>
+              <li><a href="../reviews/" data-i18n="nav.reviews">Reviews</a></li>
+              <li><a href="../contact/" aria-current="page" data-i18n="nav.contact">Contact</a></li>
             </ul>
           </nav>
         </div>
-        <ul class="header-social" aria-label="Social links">
-          <li>
-            <a class="icon-link" href="https://www.instagram.com/rebecca_ekman?igsh=eTV3eXB2cWE4bXl0" target="_blank" rel="noreferrer" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
-                <circle cx="12" cy="12" r="4.2"></circle>
-                <circle cx="17.3" cy="6.8" r="1"></circle>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="icon-link" href="https://www.facebook.com/rebecca.ekman.775" target="_blank" rel="noreferrer" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M15 3h-2.5C9.6 3 8 4.6 8 7.5V10H6v3h2v8h3v-8h2.6l.4-3H11V7.7c0-.9.3-1.7 1.8-1.7H15V3z"></path>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="icon-link" href="mailto:rebe.ekman@gmail.com" aria-label="Email">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="6" width="18" height="12" rx="2"></rect>
-                <path d="M4 8l8 6 8-6"></path>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="header-controls">
+          <div class="language-switch" role="group" aria-label="Language selection" data-i18n-attr="aria-label:lang.switchAria">
+            <button class="lang-btn" type="button" data-lang-switch="en" aria-pressed="true">ENG</button>
+            <button class="lang-btn" type="button" data-lang-switch="fi" aria-pressed="false">FIN</button>
+          </div>
+          <ul class="header-social" aria-label="Social links" data-i18n-attr="aria-label:aria.socialLinks">
+            <li>
+              <a class="icon-link" href="https://www.instagram.com/rebecca_ekman?igsh=eTV3eXB2cWE4bXl0" target="_blank" rel="noreferrer" aria-label="Instagram" data-i18n-attr="aria-label:aria.instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4.2"></circle>
+                  <circle cx="17.3" cy="6.8" r="1"></circle>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="icon-link" href="https://www.facebook.com/rebecca.ekman.775" target="_blank" rel="noreferrer" aria-label="Facebook" data-i18n-attr="aria-label:aria.facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 3h-2.5C9.6 3 8 4.6 8 7.5V10H6v3h2v8h3v-8h2.6l.4-3H11V7.7c0-.9.3-1.7 1.8-1.7H15V3z"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="icon-link" href="mailto:rebe.ekman@gmail.com" aria-label="Email" data-i18n-attr="aria-label:aria.email">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+                  <path d="M4 8l8 6 8-6"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
     <main>
       <section class="section page-hero" aria-labelledby="contact-title">
         <div class="container section-inner contact-inner">
-          <h1 id="contact-title">Contact</h1>
-          <p>
+          <h1 id="contact-title" data-i18n="contact.title">Contact</h1>
+          <p data-i18n="contact.lead">
             Reach out for gig bookings, recording sessions, teaching, or collaborations.
           </p>
         </div>
@@ -68,14 +75,14 @@
 
       <section class="section" aria-labelledby="details-title">
         <div class="container section-inner">
-          <h2 id="details-title">Details</h2>
+          <h2 id="details-title" data-i18n="details.title">Details</h2>
           <div class="info-grid">
             <article class="card">
-              <h3>Phone</h3>
+              <h3 data-i18n="details.phone">Phone</h3>
               <p><a href="tel:+358405582333">+358 40 5582333</a></p>
             </article>
             <article class="card">
-              <h3>Email</h3>
+              <h3 data-i18n="details.email">Email</h3>
               <p><a href="mailto:rebe.ekman@gmail.com">rebe.ekman@gmail.com</a></p>
             </article>
           </div>
@@ -93,6 +100,7 @@
       </div>
     </footer>
 
+    <script src="../lang.js" defer></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>

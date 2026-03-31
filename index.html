@@ -6,53 +6,60 @@
     <meta
       name="description"
       content="Jazz trumpet player Rebecca Ekman. Performances, biography, experience, and contact links."
+      data-i18n-attr="content:meta.description"
     />
-    <title>Rebecca Ekman | Jazz Trumpet Player</title>
+    <title data-i18n="meta.title">Rebecca Ekman | Jazz Trumpet Player</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body data-page="home">
     <header class="site-header">
       <div class="container nav-wrap">
         <div class="nav-left">
-          <a class="brand" href="./" aria-current="page">Home</a>
-          <nav aria-label="Primary navigation">
+          <a class="brand" href="./" aria-current="page" data-i18n="nav.home">Home</a>
+          <nav aria-label="Primary navigation" data-i18n-attr="aria-label:aria.primaryNavigation">
             <ul class="nav-links">
-              <li><a href="#about">Biography</a></li>
-              <li><a href="#music">Music</a></li>
-              <li><a href="#cv">CV</a></li>
-              <li><a href="services/">Services</a></li>
-              <li><a href="gigs/">Gigs</a></li>
-              <li><a href="reviews/">Reviews</a></li>
-              <li><a href="contact/">Contact</a></li>
+              <li><a href="#about" data-i18n="nav.biography">Biography</a></li>
+              <li><a href="#music" data-i18n="nav.music">Music</a></li>
+              <li><a href="#cv" data-i18n="nav.cv">CV</a></li>
+              <li><a href="services/" data-i18n="nav.services">Services</a></li>
+              <li><a href="gigs/" data-i18n="nav.gigs">Gigs</a></li>
+              <li><a href="reviews/" data-i18n="nav.reviews">Reviews</a></li>
+              <li><a href="contact/" data-i18n="nav.contact">Contact</a></li>
             </ul>
           </nav>
         </div>
-        <ul class="header-social" aria-label="Social links">
-          <li>
-            <a class="icon-link" href="https://www.instagram.com/rebecca_ekman?igsh=eTV3eXB2cWE4bXl0" target="_blank" rel="noreferrer" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
-                <circle cx="12" cy="12" r="4.2"></circle>
-                <circle cx="17.3" cy="6.8" r="1"></circle>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="icon-link" href="https://www.facebook.com/rebecca.ekman.775" target="_blank" rel="noreferrer" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M15 3h-2.5C9.6 3 8 4.6 8 7.5V10H6v3h2v8h3v-8h2.6l.4-3H11V7.7c0-.9.3-1.7 1.8-1.7H15V3z"></path>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="icon-link" href="mailto:rebe.ekman@gmail.com" aria-label="Email">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="6" width="18" height="12" rx="2"></rect>
-                <path d="M4 8l8 6 8-6"></path>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="header-controls">
+          <div class="language-switch" role="group" aria-label="Language selection" data-i18n-attr="aria-label:lang.switchAria">
+            <button class="lang-btn" type="button" data-lang-switch="en" aria-pressed="true">ENG</button>
+            <button class="lang-btn" type="button" data-lang-switch="fi" aria-pressed="false">FIN</button>
+          </div>
+          <ul class="header-social" aria-label="Social links" data-i18n-attr="aria-label:aria.socialLinks">
+            <li>
+              <a class="icon-link" href="https://www.instagram.com/rebecca_ekman?igsh=eTV3eXB2cWE4bXl0" target="_blank" rel="noreferrer" aria-label="Instagram" data-i18n-attr="aria-label:aria.instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4.2"></circle>
+                  <circle cx="17.3" cy="6.8" r="1"></circle>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="icon-link" href="https://www.facebook.com/rebecca.ekman.775" target="_blank" rel="noreferrer" aria-label="Facebook" data-i18n-attr="aria-label:aria.facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 3h-2.5C9.6 3 8 4.6 8 7.5V10H6v3h2v8h3v-8h2.6l.4-3H11V7.7c0-.9.3-1.7 1.8-1.7H15V3z"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="icon-link" href="mailto:rebe.ekman@gmail.com" aria-label="Email" data-i18n-attr="aria-label:aria.email">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+                  <path d="M4 8l8 6 8-6"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -63,12 +70,13 @@
             <img
               src="pictures/rebe_trumppa.jpg"
               alt="Portrait of jazz trumpet player Rebecca Ekman"
+              data-i18n-attr="alt:hero.alt"
               loading="lazy"
             />
             <div class="hero-overlay">
               <h1 id="hero-title">Rebecca Ekman</h1>
-              <p class="subtitle">Trumpet Player, Educator</p>
-              <a class="button" href="#music">Listen</a>
+              <p class="subtitle" data-i18n="hero.subtitle">Trumpet Player, Educator</p>
+              <a class="button" href="#music" data-i18n="hero.listen">Listen</a>
             </div>
           </div>
         </div>
@@ -76,8 +84,8 @@
 
       <section id="about" class="section" aria-labelledby="about-title">
         <div class="container section-inner">
-          <h2 id="about-title">Biography</h2>
-          <p>
+          <h2 id="about-title" data-i18n="about.title">Biography</h2>
+          <p data-i18n="about.text">
             I am a 25-year-old Finnish trumpet player with a strong understanding
             of jazz improvisation. I am experienced in both performance and music
             pedagogy. I am currently studying jazz performance at Metropolia
@@ -89,7 +97,7 @@
 
       <section id="music" class="section" aria-labelledby="music-title">
         <div class="container section-inner">
-          <h2 id="music-title">Music</h2>
+          <h2 id="music-title" data-i18n="music.title">Music</h2>
           <!--
           YouTube embed is intentionally hidden for now because no official video is available yet.
           <div class="video-frame">
@@ -107,6 +115,7 @@
             <iframe
               src="https://open.spotify.com/embed/track/4FwtFRNUe7hP4TT0rUiwZ6?utm_source=generator"
               title="Rebecca Ekman on Spotify"
+              data-i18n-attr="title:music.spotifyTitle"
               loading="lazy"
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             ></iframe>
@@ -116,35 +125,35 @@
 
       <section id="cv" class="section" aria-labelledby="experience-title">
         <div class="container section-inner">
-          <h2 id="experience-title">CV</h2>
+          <h2 id="experience-title" data-i18n="cv.title">CV</h2>
           <div class="timeline">
             <article>
-              <h3>Artistic Experience</h3>
+              <h3 data-i18n="cv.artistic.title">Artistic experience</h3>
               <ul>
-                <li>Jan 2025, Jan 2026 - UMO Helsinki Jazz Orchestra: Trumpet section, soloist</li>
-                <li>March &amp; September 2025 - Karri Koira Band: Horn section, pop music</li>
-                <li>March 2025 - Sibelius Music School: Substitute trumpet teacher, classical</li>
-                <li>December 2024 - Riku Niemi Orchestra: Horn section, solo playing</li>
-                <li>October 2024 - Lahti Conservatory: Trumpet teacher, classical and jazz</li>
-                <li>October 2024 - Pop &amp; Jazz Conservatory: Trumpet substitute teacher, jazz</li>
-                <li>Summer 2024 - Junior All Stars Big Band, conducted by Antti Rissanen</li>
+                <li data-i18n="cv.artistic.1">Jan 2025, Jan 2026 - UMO Helsinki Jazz Orchestra: Trumpet section, soloist</li>
+                <li data-i18n="cv.artistic.2">March &amp; September 2025 - Karri Koira Band: Horn section, pop music</li>
+                <li data-i18n="cv.artistic.3">March 2025 - Sibelius Music School: Substitute trumpet teacher, classical</li>
+                <li data-i18n="cv.artistic.4">December 2024 - Riku Niemi Orchestra: Horn section, solo playing</li>
+                <li data-i18n="cv.artistic.5">October 2024 - Lahti Conservatory: Trumpet teacher, classical and jazz</li>
+                <li data-i18n="cv.artistic.6">October 2024 - Pop &amp; Jazz Conservatory: Trumpet substitute teacher, jazz</li>
+                <li data-i18n="cv.artistic.7">Summer 2024 - Junior All Stars Big Band, conducted by Antti Rissanen</li>
               </ul>
             </article>
             <article>
-              <h3>Pedagogy and Performance Focus</h3>
+              <h3 data-i18n="cv.focus.title">Pedagogy and performance focus</h3>
               <ul>
-                <li>Strong foundation in jazz improvisation and ensemble playing</li>
-                <li>Teaching experience in both classical and jazz trumpet instruction</li>
-                <li>Active performer across jazz orchestra, pop, and contemporary projects</li>
+                <li data-i18n="cv.focus.1">Strong foundation in jazz improvisation and ensemble playing</li>
+                <li data-i18n="cv.focus.2">Teaching experience in both classical and jazz trumpet instruction</li>
+                <li data-i18n="cv.focus.3">Active performer across jazz orchestra, pop, and contemporary projects</li>
               </ul>
             </article>
             <article>
-              <h3>Education</h3>
+              <h3 data-i18n="cv.education.title">Education</h3>
               <ul>
-                <li>2023 - present: Bachelor of Music Performance (AMK), Metropolia University of Applied Sciences</li>
-                <li>2025 - 2026: Jazz Curriculum at Sibelius Academy (Open University studies)</li>
-                <li>2023 - 2025: Musician (Vocational School), Pop &amp; Jazz Conservatory</li>
-                <li>2016 - 2019: High School Graduate, Sibelius Upper Secondary School</li>
+                <li data-i18n="cv.education.1">2023 - present: Bachelor of Music Performance (AMK), Metropolia University of Applied Sciences</li>
+                <li data-i18n="cv.education.2">2025 - 2026: Jazz Music moduleat Sibelius Academy (Open University)</li>
+                <li data-i18n="cv.education.3">2023 - 2025: Musician (Vocational School), Pop &amp; Jazz Conservatory</li>
+                <li data-i18n="cv.education.4">2016 - 2019: High School Graduate, Sibelius Upper Secondary School</li>
               </ul>
             </article>
           </div>
@@ -153,8 +162,8 @@
 
       <section id="contact" class="section" aria-labelledby="contact-title">
         <div class="container section-inner contact-inner">
-          <h2 id="contact-title">Contact</h2>
-          <p>
+          <h2 id="contact-title" data-i18n="contact.title">Contact</h2>
+          <p data-i18n="contact.text">
             For bookings and collaborations, visit the contact page or use the quick
             links below.
           </p>
@@ -163,7 +172,7 @@
             <li><a href="https://www.facebook.com/rebecca.ekman.775" target="_blank" rel="noreferrer">Facebook</a></li>
             <li><a href="mailto:rebe.ekman@gmail.com">Email</a></li>
           </ul>
-          <p class="subtle-link"><a href="contact/">Full contact details</a></p>
+          <p class="subtle-link"><a href="contact/" data-i18n="contact.full">Full contact details</a></p>
         </div>
       </section>
     </main>
@@ -174,6 +183,7 @@
       </div>
     </footer>
 
+    <script src="lang.js" defer></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
