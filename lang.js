@@ -3,7 +3,7 @@
     en: {
       common: {
         "lang.switchAria": "Language selection",
-        "nav.home": "Home",
+        "nav.home": "About",
         "nav.biography": "Biography",
         "nav.music": "Music",
         "nav.cv": "CV",
@@ -93,7 +93,7 @@
     fi: {
       common: {
         "lang.switchAria": "Kielen valinta",
-        "nav.home": "Etusivu",
+        "nav.home": "Tietoa",
         "nav.biography": "Esittely",
         "nav.music": "Musiikkia",
         "nav.cv": "CV",
