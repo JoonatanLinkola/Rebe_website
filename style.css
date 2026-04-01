@@ -673,10 +673,56 @@ h1 {
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 280px));
+  grid-template-columns: repeat(2, minmax(0, 180px));
   justify-content: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
+}
+
+.info-grid .card {
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+
+.contact-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.1rem;
+}
+
+.contact-label + br {
+  display: none;
+}
+
+p:has(.contact-label) {
+  margin-top: 0.9rem;
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.contact-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.contact-details dt {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.contact-details dd {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.contact-details dd a {
+  color: var(--text) !important;
+  text-decoration-color: rgba(154, 108, 70, 0.55);
+  text-underline-offset: 0.2rem;
+  text-decoration-thickness: 1px;
 }
 
 .card a,
@@ -712,10 +758,6 @@ h1 {
 
 @media (max-width: 840px) {
   .performance-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .info-grid {
     grid-template-columns: 1fr;
   }
 
