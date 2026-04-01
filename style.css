@@ -243,24 +243,24 @@ main,
 
 .mobile-menu {
   position: absolute;
-  top: calc(100% + 0.35rem);
+  top: 100%;
   left: 0;
   right: 0;
   z-index: 120;
   background: rgb(255, 248, 235);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: 0;
   padding: 0.8rem;
   box-shadow: 0 14px 30px rgba(30, 26, 23, 0.16);
   opacity: 0;
-  transform: translateY(-8px);
+  clip-path: inset(0 0 100% 0);
   pointer-events: none;
-  transition: opacity 220ms ease, transform 220ms ease;
+  transition: opacity 220ms ease, clip-path 260ms ease;
 }
 
 .mobile-menu.is-open {
   opacity: 1;
-  transform: translateY(0);
+  clip-path: inset(0 0 0% 0);
   pointer-events: auto;
 }
 
@@ -697,7 +697,6 @@ h1 {
 
 @media (max-width: 640px) {
   .nav-wrap {
-    position: relative;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
