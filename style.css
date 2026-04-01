@@ -18,8 +18,8 @@ a:not(.icon-link):not(.button) {
   transition: text-shadow 180ms ease;
 }
 
-a:not(.icon-link):not(.button):hover,
-a:not(.icon-link):not(.button):focus-visible {
+a:not(.icon-link):not(.button):not(.brand):hover,
+a:not(.icon-link):not(.button):not(.brand):focus-visible {
   text-shadow: 0.015em 0 0 currentColor, -0.015em 0 0 currentColor;
 }
 
@@ -139,6 +139,19 @@ main,
   line-height: 1;
   white-space: nowrap;
   flex: 0 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  transition: none;
+}
+
+.brand:hover,
+.brand:focus-visible {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .nav-links {
@@ -284,6 +297,10 @@ main,
 .mobile-nav-links a[aria-current="page"] {
   color: var(--text);
   font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .mobile-social {
