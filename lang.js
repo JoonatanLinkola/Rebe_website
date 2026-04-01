@@ -48,7 +48,7 @@
           "cv.education.3": "2023 - 2025: Musician (Vocational School), Pop & Jazz Conservatory",
           "cv.education.4": "2016 - 2019: High School Graduate, Sibelius Upper Secondary School",
           "contact.title": "Contact",
-          "contact.text": "For bookings and collaborations, visit the contact page or use the quick links below.",
+          "contact.text": "For bookings and collaborations, visit the <a href=\"contact/\">contact page</a> or use the quick links below.",
           "contact.full": "Full contact details"
         },
         contact: {
@@ -139,7 +139,7 @@
           "cv.education.3": "2023 - 2025: Muusikko, Pop & Jazz Konservatorio",
           "cv.education.4": "2016 - 2019: Ylioppilas, Sibelius-lukio",
           "contact.title": "Yhteys",
-          "contact.text": "Keikkakyselyihin ja yhteistyöehdotuksiin voit siirtyä yhteyssivulle tai käyttää alla olevia pikalinkkejä.",
+          "contact.text": "Keikkakyselyissä ja yhteistyöehdotuksissa voit siirtyä <a href=\"contact/\">yhteyssivulle</a> tai käyttää alla olevia pikalinkkejä.",
           "contact.full": "Yhteystiedot"
         },
         contact: {
@@ -211,6 +211,11 @@
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const key = element.getAttribute("data-i18n");
       element.textContent = resolveText(texts, key);
+    });
+
+    document.querySelectorAll("[data-i18n-html]").forEach((element) => {
+      const key = element.getAttribute("data-i18n-html");
+      element.innerHTML = resolveText(texts, key);
     });
 
     document.querySelectorAll("[data-i18n-attr]").forEach((element) => {
