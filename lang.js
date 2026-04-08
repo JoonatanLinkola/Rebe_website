@@ -20,10 +20,10 @@
       },
       pages: {
         home: {
-          "meta.description": "Jazz trumpet player Rebecca Ekman. Performances, biography, experience, and contact links.",
-          "meta.title": "Rebecca Ekman | Jazz Trumpet Player",
-          "hero.title": "Rebecca Ekman - Jazz Trumpet Player",
-          "hero.alt": "Portrait of jazz trumpet player Rebecca Ekman",
+          "meta.description": "Trumpet player Rebecca Ekman. Performances, biography, experience, and contact links.",
+          "meta.title": "Rebecca Ekman | Trumpet Player",
+          "hero.title": "Rebecca Ekman - Trumpet Player",
+          "hero.alt": "Portrait of trumpet player Rebecca Ekman",
           "hero.subtitle": "Trumpet Player, Educator",
           "hero.listen": "Listen",
           "about.title": "Biography",
@@ -113,8 +113,8 @@
       pages: {
         home: {
           "meta.description": "Jazztrumpetisti Rebecca Ekman. Esiintymiset, esittely, kokemus ja yhteystiedot.",
-          "meta.title": "Rebecca Ekman | Jazztrumpetisti",
-          "hero.title": "Rebecca Ekman - Jazztrumpetisti",
+          "meta.title": "Rebecca Ekman | Trumpetisti",
+          "hero.title": "Rebecca Ekman - Trumpetisti",
           "hero.alt": "Muotokuva jazztrumpetisti Rebecca Ekmanista",
           "hero.subtitle": "Trumpetisti, musiikinopettaja",
           "hero.listen": "Kuuntele",
