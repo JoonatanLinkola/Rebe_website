@@ -82,68 +82,31 @@
     </header>
 
     <main>
+      <!-- All gigs in one list — the script sorts them into upcoming/past with year headers -->
+      <div id="all-gigs" hidden>
+        <p data-date="19.8.2026">19.8. <a href="https://www.tiketti.fi/arja-koriseva-ja-riku-niemi-orchestra-heinolan-kesateatteri-lippuja/118476" target="_blank" rel="noreferrer">Arja Koriseva ja Riku Niemi Orchestra – Elokuun illassa</a></p>
+        <p data-date="17.7.2026">17.7. <a href="https://ilosaarirock.fi/ohjelma/ricky-tick-big-band-julkinen-sana/" target="_blank" rel="noreferrer">Ricky-Tick Big Band &amp; Julkinen Sana</a></p>
+        <p data-date="2.7.2026">2.7. <a href="https://umohelsinki.fi/tapahtuma/jazz-jam-brew-jamit-kesalla-2026/" target="_blank" rel="noreferrer">Jazz Jam &amp; Brew - Konepaja Biergarten</a></p>
+        <p data-date="27.5.2026">27.5. Rebecca Ekman Quintet - El Fant Cafe &amp; Bar</p>
+        <p data-date="18.4.2026">18.4. <a href="https://sinfoniaorkesterit.fi/en/concert/rno-swings-hits/" target="_blank" rel="noreferrer">Riku Niemi Orchestra - Swings &amp; Hits</a></p>
+        <p data-date="12.3.2026">12.3. <a href="https://www.metropolia.fi/fi/metropoliasta/ajankohtaista/tapahtumat/soul-voices-big-band-juurevaa-soulia-ja-rhythm-blues-klassikoita" target="_blank" rel="noreferrer">Soul Voices Big Band: juurevaa soulia ja rhythm &amp; blues -klassikoita</a></p>
+        <p data-date="23.1.2026">22.-23.1. <a href="https://umohelsinki.fi/tapahtuma/umo-helsinki-jazz-orchestra-metropolian-uudet-kyvyt-2026/" target="_blank" rel="noreferrer">UMO Helsinki Jazz Orchestra &amp; Metropolian uudet kyvyt 2026</a></p>
+        <p data-date="13.9.2025">13.9. Karri Koira Allas Live</p>
+        <p data-date="15.3.2025">15.3. Karri Koira @ Tavastia</p>
+        <p data-date="17.1.2025">16.-17.1. <a href="https://umohelsinki.fi/tapahtuma/ilmaiskonsertti-umo-helsinki-jazz-orchestra-metropolian-uudet-kyvyt-2025/" target="_blank" rel="noreferrer">UMO Helsinki Jazz Orchestra &amp; Metropolian uudet kyvyt 2025</a></p>
+      </div>
+
       <section class="section" aria-labelledby="upcoming-title">
         <div class="container section-inner">
           <h2 id="upcoming-title" data-i18n="gigs.upcoming.title">Upcoming gigs</h2>
-          <div class="timeline">
-            <article>
-              <h3>2026</h3>
-              <p>19.8. <a href="https://www.tiketti.fi/arja-koriseva-ja-riku-niemi-orchestra-heinolan-kesateatteri-lippuja/118476" target="_blank" rel="noreferrer">Arja Koriseva ja Riku Niemi Orchestra – Elokuun illassa</a></p>
-              <p>17.7. <a href="https://ilosaarirock.fi/ohjelma/ricky-tick-big-band-julkinen-sana/" target="_blank" rel="noreferrer">Ricky-Tick Big Band &amp; Julkinen Sana</a></p>
-              <p>2.7. <a href="https://umohelsinki.fi/tapahtuma/jazz-jam-brew-jamit-kesalla-2026/" target="_blank" rel="noreferrer">Jazz Jam &amp; Brew - Konepaja Biergarten</a></p>
-              <p>27.5. Rebecca Ekman Quintet - El Fant Cafe &amp; Bar</p>
-
-            </article>
-          </div>
+          <div class="timeline"></div>
         </div>
       </section>
 
       <section class="section" aria-labelledby="past-title">
         <div class="container section-inner">
           <h2 id="past-title" data-i18n="gigs.past.title">Past gigs</h2>
-          <div class="timeline">
-            <article>
-              <h3>2026</h3>
-              <p>
-                18.4.
-                <a href="https://sinfoniaorkesterit.fi/en/concert/rno-swings-hits/" target="_blank" rel="noreferrer"
-                  >Riku Niemi Orchestra - Swings &amp; Hits</a
-                >
-              </p>
-              <p>
-                12.3.
-                <a
-                  href="https://www.metropolia.fi/fi/metropoliasta/ajankohtaista/tapahtumat/soul-voices-big-band-juurevaa-soulia-ja-rhythm-blues-klassikoita"
-                  target="_blank"
-                  rel="noreferrer"
-                  >Soul Voices Big Band: juurevaa soulia ja rhythm &amp; blues -klassikoita</a
-                >
-              </p>
-              <p>
-                22-23.1.
-                <a
-                  href="https://umohelsinki.fi/tapahtuma/umo-helsinki-jazz-orchestra-metropolian-uudet-kyvyt-2026/"
-                  target="_blank"
-                  rel="noreferrer"
-                  >UMO Helsinki Jazz Orchestra &amp; Metropolian uudet kyvyt 2026</a
-                >
-              </p>
-            </article>
-            <article>
-              <h3>2025</h3>
-              <p>13.9. Karri Koira Allas Live</p>
-              <p>15.3. Karri Koira @ Tavastia</p>
-              <p>
-                16-17.1.
-                <a
-                  href="https://umohelsinki.fi/tapahtuma/ilmaiskonsertti-umo-helsinki-jazz-orchestra-metropolian-uudet-kyvyt-2025/"
-                  target="_blank"
-                  rel="noreferrer"
-                  >UMO Helsinki Jazz Orchestra &amp; Metropolian uudet kyvyt 2025</a
-                >
-              </p>
-            </article>
-          </div>
+          <div class="timeline"></div>
         </div>
       </section>
     </main>
@@ -157,6 +120,56 @@
     <script src="../lang.js" defer></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Auto-sort gigs into upcoming/past with year headers
+      (function () {
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        var allGigs = document.querySelectorAll('#all-gigs p[data-date]');
+        var upcomingTimeline = document.querySelector('[aria-labelledby="upcoming-title"] .timeline');
+        var pastTimeline = document.querySelector('[aria-labelledby="past-title"] .timeline');
+
+        function parseDate(str) {
+          var parts = str.split('.');
+          return new Date(parseInt(parts[2]), parseInt(parts[1]) - 1, parseInt(parts[0]));
+        }
+
+        var upcoming = [];
+        var past = [];
+
+        allGigs.forEach(function (p) {
+          var d = parseDate(p.dataset.date);
+          if (d >= today) {
+            upcoming.push({ el: p, date: d });
+          } else {
+            past.push({ el: p, date: d });
+          }
+        });
+
+        upcoming.sort(function (a, b) { return b.date - a.date; });
+        past.sort(function (a, b) { return b.date - a.date; });
+
+        function buildTimeline(container, gigs) {
+          var groups = {};
+          gigs.forEach(function (g) {
+            var y = g.date.getFullYear();
+            if (!groups[y]) groups[y] = [];
+            groups[y].push(g.el);
+          });
+          Object.keys(groups).sort(function (a, b) { return b - a; }).forEach(function (year) {
+            var article = document.createElement('article');
+            var h3 = document.createElement('h3');
+            h3.textContent = year;
+            article.appendChild(h3);
+            groups[year].forEach(function (el) { article.appendChild(el); });
+            container.appendChild(article);
+          });
+        }
+
+        buildTimeline(upcomingTimeline, upcoming);
+        buildTimeline(pastTimeline, past);
+      })();
     </script>
   </body>
 </html>
