@@ -336,7 +336,7 @@ main,
   transition: transform 260ms ease;
 }
 
-.language-switch[data-active-lang="fi"]::before {
+.language-switch[data-active-lang="en"]::before {
   transform: translateX(100%);
 }
 
